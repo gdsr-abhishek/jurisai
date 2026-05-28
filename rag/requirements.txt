@@ -1,2 +1,6 @@
 fastapi
 uvicorn
+pypdf
+qdrant-client
+sentence-transformers
+langchain-text-splitters
