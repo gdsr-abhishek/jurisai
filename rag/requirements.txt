@@ -4,3 +4,5 @@ pypdf
 qdrant-client
 sentence-transformers
 langchain-text-splitters
+FlagEmbedding
+qdrant-client
