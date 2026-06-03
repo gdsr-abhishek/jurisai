@@ -42,9 +42,7 @@ Top 5 chunks returned by each. Top result noted below.
 | BM25 | Evidence Act — definitions of document, offence | ❌ Keyword mismatch |
 
 **Observation:** Dense drifted semantically toward "protection"-related content (labour + domestic violence acts). BM25 matched generic legal keywords ("offence", "law", "person") but missed POCSO entirely. Both fail on abbreviation queries.
-
 ---
-
 ### Query 2 — "Protection of Children from Sexual Offences"
 
 | Mode | Top returned chunk (summary) | Relevant? |
@@ -54,11 +52,16 @@ Top 5 chunks returned by each. Top result noted below.
 | Dense | POCSO definitions — child means any person below 18 years | ✅ Correct |
 | Dense | POCSO miscellaneous — Section 39 to 46 | ✅ Correct |
 | Dense | POCSO preamble repeat — sexual exploitation heinous crimes | ✅ Correct |
+| BM25 | POCSO — sexual exploitation enacted by Parliament | ✅ Correct |
+| BM25 | IT Act 2000 — Chapter XII intermediaries | ❌ Wrong act |
+| BM25 | POCSO — alternate punishment Section 42 | ✅ Correct |
+| BM25 | Labour Act — Factories Act 1948 | ❌ Wrong act |
+| BM25 | Bharatiya Nyaya Sanhita — property offences | ❌ Wrong act |
 
-**recall@5: 5/5 = 1.0** — perfect retrieval when full act name is used.
+**Dense recall@5: 5/5 = 1.0** — perfect retrieval when full act name is used.
+**BM25 recall@5: 2/5 = 0.4** — keyword "offences" and "protection" appear across many acts causing drift.
 
-**Observation:** Dense retrieval works correctly when query vocabulary matches chunk vocabulary exactly. The failure in Query 1 was not a model failure — it was a vocabulary mismatch between abbreviation ("POCSO") and full name in chunks.
-
+**Observation:** Dense wins on semantic coherence. BM25 gets confused by common legal keywords appearing across multiple acts. Hybrid fusion should combine dense precision with BM25 keyword anchoring.
 ---
 
 ### Query 3 — (add next test query here)
@@ -96,7 +99,7 @@ Hybrid fusion is the next step — combining BM25's rare-keyword anchoring with 
 | 2026-06-02 | Dense search endpoint live (BGE-M3 + Qdrant) | Baseline established |
 | 2026-06-02 | BM25 keyword index built from 2082 chunks | Baseline established |
 | 2026-06-02 | Vocabulary mismatch failure mode identified | Informs Week 5 query expansion |
-| — | Source metadata added to response | Pending this week |
+| 2026-06-03 | Source metadata added to /search response | Failure mode 3 closed |
 | — | Hybrid retrieval (RRF fusion) | Pending Week 2 |
 | — | Cross-encoder reranker | Pending Week 3 |
 | — | Query expansion for abbreviations | Pending Week 5 |

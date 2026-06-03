@@ -5,6 +5,8 @@ from rank_bm25 import BM25Okapi
 import os
 from dotenv import load_dotenv
 
+
+
 load_dotenv()
 
 # global init — runs once at startup
@@ -17,17 +19,27 @@ texts = [p.payload["page_content"] for p in all_points]
 tokenized = [text.split() for text in texts]
 bm25 = BM25Okapi(tokenized)
 
-
 def dense_search(query: str, top_k: int = 5):
     vector = embedder.encode(query).tolist()
     results = client.query_points(collection_name="jurisai", query=vector, limit=top_k,using='dense')
-    return [r.payload["page_content"] for r in results.points]
+    response= [
+        {'text':r.payload["page_content"],
+         'source':r.payload["source"] 
+        }
+        for r in results.points]
+    return  response
 
 
 def bm25_search(query: str, top_k: int = 5):
     tokens = query.split()
     scores = bm25.get_scores(tokens)
     top_indices = scores.argsort()[-top_k:][::-1]
-    return [texts[i] for i in top_indices]
+    return [
+        {
+            "text": texts[i],
+            "source": all_points[i].payload["source"]
+        }
+        for i in top_indices
+    ]
 # print(f'dense : {dense_search("what is POCSO law?",5)}\n\n\n')
 # print(f'bm25 or keyword response {bm25_search("what is POCSO law?",5)}')
