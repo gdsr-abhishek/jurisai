@@ -6,3 +6,6 @@ sentence-transformers
 langchain-text-splitters
 FlagEmbedding
 qdrant-client
+fastapi[standard]
+rank-bm25
+python-dotenv
