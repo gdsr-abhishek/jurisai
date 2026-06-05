@@ -8,4 +8,4 @@ RUN pip install  -r requirements.txt
 COPY . .
 ENV PYTHONPATH=/app
 EXPOSE 8000
-CMD fastapi run main.py --host 0.0.0.0
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT
