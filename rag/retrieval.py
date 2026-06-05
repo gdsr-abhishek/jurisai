@@ -20,8 +20,14 @@ tokenized = [text.split() for text in texts]
 bm25 = BM25Okapi(tokenized)
 
 def dense_search(query: str, top_k: int = 5):
-    vector = embedder.encode(query).tolist()
-    results = client.query_points(collection_name="jurisai", query=vector, limit=top_k,using='dense')
+    try:
+        vector = embedder.encode(query).tolist()
+    except Exception as e:
+        raise RuntimeError("Embedding service unavailable")
+    try:
+        results = client.query_points(collection_name="jurisai", query=vector, limit=top_k,using='dense')
+    except Exception as e:
+        raise RuntimeError("Search service unavailable")
     response= [
         {'text':r.payload["page_content"],
          'source':r.payload["source"] 
@@ -32,14 +38,17 @@ def dense_search(query: str, top_k: int = 5):
 
 def bm25_search(query: str, top_k: int = 5):
     tokens = query.split()
-    scores = bm25.get_scores(tokens)
-    top_indices = scores.argsort()[-top_k:][::-1]
-    return [
-        {
-            "text": texts[i],
-            "source": all_points[i].payload["source"]
-        }
-        for i in top_indices
-    ]
+    try:
+        scores = bm25.get_scores(tokens)
+        top_indices = scores.argsort()[-top_k:][::-1]
+        return [
+            {
+                "text": texts[i],
+                "source": all_points[i].payload["source"]
+            }
+            for i in top_indices
+        ]
+    except Exception as e:
+        raise RuntimeError("Search service unavailable")
 # print(f'dense : {dense_search("what is POCSO law?",5)}\n\n\n')
 # print(f'bm25 or keyword response {bm25_search("what is POCSO law?",5)}')
