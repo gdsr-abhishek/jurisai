@@ -10,3 +10,10 @@ class DenseSearch(BaseModel):
     source:str
 class DenseSearchResponse(BaseModel):
     response: List[DenseSearch]
+class HybridSearch(BaseModel):
+    text: str
+    source: str
+    score: float
+
+class HybridSearchResponse(BaseModel):
+    response: List[HybridSearch]

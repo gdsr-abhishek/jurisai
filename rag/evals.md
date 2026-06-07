@@ -45,34 +45,24 @@ Top 5 chunks returned by each. Top result noted below.
 ---
 ### Query 2 — "Protection of Children from Sexual Offences"
 
-| Mode | Top returned chunk (summary) | Relevant? |
+| Mode | recall@5 | Notes |
 |---|---|---|
-| Dense | POCSO Act preamble — offences of sexual assault, harassment, pornography | ✅ Correct |
-| Dense | POCSO arrangement of sections — Chapter I to IX | ✅ Correct |
-| Dense | POCSO definitions — child means any person below 18 years | ✅ Correct |
-| Dense | POCSO miscellaneous — Section 39 to 46 | ✅ Correct |
-| Dense | POCSO preamble repeat — sexual exploitation heinous crimes | ✅ Correct |
-| BM25 | POCSO — sexual exploitation enacted by Parliament | ✅ Correct |
-| BM25 | IT Act 2000 — Chapter XII intermediaries | ❌ Wrong act |
-| BM25 | POCSO — alternate punishment Section 42 | ✅ Correct |
-| BM25 | Labour Act — Factories Act 1948 | ❌ Wrong act |
-| BM25 | Bharatiya Nyaya Sanhita — property offences | ❌ Wrong act |
+| Dense | 5/5 ✅ | Perfect — vocabulary matches exactly |
+| BM25 | 2/5 ⚠️ | Keyword drift — "offences" matches IT Act, Labour Act |
+| Hybrid (RRF k=60) | 4/5 ✅ | One IT Act chunk slipped in at rank 4 |
 
-**Dense recall@5: 5/5 = 1.0** — perfect retrieval when full act name is used.
-**BM25 recall@5: 2/5 = 0.4** — keyword "offences" and "protection" appear across many acts causing drift.
-
-**Observation:** Dense wins on semantic coherence. BM25 gets confused by common legal keywords appearing across multiple acts. Hybrid fusion should combine dense precision with BM25 keyword anchoring.
+**Observation:** Dense beats hybrid on this query because vocabulary matches exactly. Hybrid shines on ambiguous or informal queries where dense drifts semantically and BM25 anchors on rare keywords. RRF correctly
 ---
 
-### Query 3 — (add next test query here)
+### Query 3 — "What are the penalties for hacking under the IT Act?"
 
-| Mode | Top returned chunk (summary) | Relevant? |
+| Mode | recall@5 | Notes |
 |---|---|---|
-| Dense | | |
-| BM25 | | |
+| Dense | 5/5 ✅ | Semantic understanding of "hacking" — correct IT Act chunks |
+| BM25 | 1/5 ❌ | "penalties" matches RTI + CPA — severe keyword drift |
+| Hybrid | 4/5 ✅ | Rescued BM25 failure — RRF pushed correct IT Act chunks up |
 
-**Observation:**
-
+**Observation:** Hybrid's biggest value is rescuing bad BM25 results. Dense won on both queries tested so far. Hypothesis: hybrid will win over dense on abbreviated or informal queries — test in Week 5 with query expansion.
 ---
 
 ## Failure modes identified — Week 2

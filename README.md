@@ -189,4 +189,4 @@ jurisai/
 
 ---
 
-*Built as part of a 26-week Applied AI Engineer portfolio. JurisAI — Week 1–6 of 26.*
+*Built as part of a 26-week Applied AI Engineer portfolio. JurisAI — Week 1–6 of 26.*cd ..

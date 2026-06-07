@@ -1,25 +1,22 @@
 # retrieval.py
+from collections import defaultdict
+
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
 from rank_bm25 import BM25Okapi
 import os
 from dotenv import load_dotenv
 
+from models import HybridSearchResponse,HybridSearch
+
 
 
 load_dotenv()
-
 # global init — runs once at startup
 client = QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
-embedder = SentenceTransformer("BAAI/bge-m3")
-
-# BM25 — scroll all chunks and build index once
-all_points = client.scroll(collection_name="jurisai", limit=3000)[0]
-texts = [p.payload["page_content"] for p in all_points]
-tokenized = [text.split() for text in texts]
-bm25 = BM25Okapi(tokenized)
 
 def dense_search(query: str, top_k: int = 5):
+    embedder = SentenceTransformer("BAAI/bge-m3")
     try:
         vector = embedder.encode(query).tolist()
     except Exception as e:
@@ -37,6 +34,12 @@ def dense_search(query: str, top_k: int = 5):
 
 
 def bm25_search(query: str, top_k: int = 5):
+    # BM25 — scroll all chunks and build index once
+    all_points = client.scroll(collection_name="jurisai", limit=3000)[0]
+    texts = [p.payload["page_content"] for p in all_points]
+    sources = [p.payload.get("source", "unknown") for p in all_points]
+    tokenized = [text.split() for text in texts]
+    bm25 = BM25Okapi(tokenized)
     tokens = query.split()
     try:
         scores = bm25.get_scores(tokens)
@@ -44,11 +47,29 @@ def bm25_search(query: str, top_k: int = 5):
         return [
             {
                 "text": texts[i],
-                "source": all_points[i].payload["source"]
+                "source": sources[i]
             }
             for i in top_indices
         ]
     except Exception as e:
         raise RuntimeError("Search service unavailable")
+
+def hybrid_search(query,top_k:int = 5) -> HybridSearchResponse:
+    dense_result = dense_search(query,top_k)
+    bm_25_result = bm25_search(query,top_k)
+    scores = defaultdict(float)
+    all_sources = defaultdict(str)
+    for rank,result in enumerate(dense_result,start=1):
+        text = result['text']
+        all_sources[text] = result['source']
+        scores[text] += 1/(60 + rank)
+    for rank,result in enumerate(bm_25_result,start=1):
+        text = result['text']
+        all_sources[text] = result['source']
+        scores[text] +=1/(60+rank)
+    ranked = sorted(scores.items(),key=lambda x:x[1],reverse=True)[:top_k]
+    result = [ HybridSearch(text=str(i[0]),source=all_sources[i[0]],score=i[1])  for i in ranked]
+    return result
+
 # print(f'dense : {dense_search("what is POCSO law?",5)}\n\n\n')
 # print(f'bm25 or keyword response {bm25_search("what is POCSO law?",5)}')
