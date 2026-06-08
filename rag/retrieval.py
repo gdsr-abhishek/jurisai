@@ -1,5 +1,6 @@
 # retrieval.py
 from collections import defaultdict
+from typing import List
 
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
@@ -14,9 +15,11 @@ from models import HybridSearchResponse,HybridSearch
 load_dotenv()
 # global init — runs once at startup
 client = QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
+from sentence_transformers import CrossEncoder
 
+reranker_model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+embedder = SentenceTransformer("BAAI/bge-m3")
 def dense_search(query: str, top_k: int = 5):
-    embedder = SentenceTransformer("BAAI/bge-m3")
     try:
         vector = embedder.encode(query).tolist()
     except Exception as e:
@@ -69,7 +72,21 @@ def hybrid_search(query,top_k:int = 5) -> HybridSearchResponse:
         scores[text] +=1/(60+rank)
     ranked = sorted(scores.items(),key=lambda x:x[1],reverse=True)[:top_k]
     result = [ HybridSearch(text=str(i[0]),source=all_sources[i[0]],score=i[1])  for i in ranked]
-    return result
-
+    return reranker(query,result,top_k//4)
+def reranker(query: str, ranked_chunks: List[HybridSearch], top_k: int = 5):
+    pairs = [(query, ranked_chunk.text) for ranked_chunk in ranked_chunks]
+    scores = reranker_model.predict(pairs)
+    
+    # normalize to 0-1
+    min_score, max_score = scores.min(), scores.max()
+    normalized = (scores - min_score) / (max_score - min_score + 1e-8)
+    
+    ranked = sorted(zip(normalized, ranked_chunks), key=lambda x: x[0], reverse=True)
+    return [HybridSearch(text=chunk.text, source=chunk.source, score=round(float(score), 4)) 
+            for score, chunk in ranked[:top_k]]
 # print(f'dense : {dense_search("what is POCSO law?",5)}\n\n\n')
 # print(f'bm25 or keyword response {bm25_search("what is POCSO law?",5)}')
+# from sentence_transformers import CrossEncoder
+# model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+# score = model.predict([("what is POCSO", "The Protection of Children from Sexual Offences Act")])
+# print(score)

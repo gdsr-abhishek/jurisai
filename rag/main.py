@@ -26,7 +26,7 @@ def search_bm25(request: SearchRequest) -> DenseSearchResponse:
 @app.post("/search/hybrid")
 def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
     try:
-        results = HybridSearchResponse(response=hybrid_search(query=request.query,top_k=request.top_k))
+        results = HybridSearchResponse(response=hybrid_search(query=request.query,top_k=request.top_k *4))
     except RuntimeError as e:
         raise HTTPException(status_code=503 , detail=str(e))
     return results
