@@ -3,6 +3,12 @@ from retrieval import dense_search, bm25_search,hybrid_search
 from models import HybridSearchResponse, SearchRequest , DenseSearchResponse , LegalResponse,Citation
 import instructor
 from litellm import acompletion
+import litellm
+from dotenv import load_dotenv
+from langfuse.decorators import observe
+litellm._turn_on_debug()
+load_dotenv()
+
 app = FastAPI()
 @app.get('/health')
 async def get_health():
@@ -33,6 +39,7 @@ async def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
 
 client = instructor.from_litellm(completion=acompletion)
 @app.post("/query")
+@observe()
 async def query_rag_system(request: SearchRequest) -> LegalResponse:
     try:
         reranked = hybrid_search(query=request.query, top_k=request.top_k * 4)

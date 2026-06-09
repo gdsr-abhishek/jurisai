@@ -11,3 +11,6 @@ rank-bm25
 python-dotenv
 litellm
 instructor
+opentelemetry-api 
+opentelemetry-sdk 
+opentelemetry-exporter-otlp
