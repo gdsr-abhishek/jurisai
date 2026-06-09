@@ -37,28 +37,28 @@ async def query_rag_system(request: SearchRequest) -> LegalResponse:
     try:
         reranked = hybrid_search(query=request.query, top_k=request.top_k * 4)
         
-        # clean numbered context for the LLM
         context = "\n\n".join([
             f"[{i+1}][{chunk.source}]: {chunk.text}"
             for i, chunk in enumerate(reranked)
         ])
         
-        legal_response = await client.chat.completions.create(
-            response_model=LegalResponse,
+        response = await acompletion(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a legal assistant for Indian citizens. Answer based strictly on the numbered context below. Only cite sources from the context — do not invent citations. If context is insufficient, set abstain to true."},
+                {"role": "system", "content": "You are a legal assistant for Indian citizens. Answer based strictly on the numbered context below. Be plain and clear."},
                 {"role": "user", "content": f"Question: {request.query}\n\nContext:\n{context}"}
             ]
         )
-        
-        # overwrite with real values — don't trust LLM for these
-        legal_response.citations = [
-            Citation(text=chunk.text, source=chunk.source, score=chunk.score)
-            for chunk in reranked
-        ]
-        legal_response.confidence = float(reranked[0].score)
-        legal_response.abstain = legal_response.confidence < 0.6
+
+        answer = response.choices[0].message.content
+
+        legal_response = LegalResponse(
+            answer=answer,
+            citations=[Citation(text=c.text, source=c.source, score=c.score) for c in reranked],
+            confidence=float(reranked[0].score),
+            abstain=float(reranked[0].score) < 0.6,
+            abstain_reason="Low retrieval confidence" if float(reranked[0].score) < 0.6 else None
+        )
 
     except RuntimeError as e:
         raise HTTPException(status_code=503, detail=str(e))
