@@ -39,7 +39,7 @@ async def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
 
 client = instructor.from_litellm(completion=acompletion)
 @app.post("/query")
-@observe()
+@observe(name='jurisai-legal-query')
 async def query_rag_system(request: SearchRequest) -> LegalResponse:
     try:
         reranked = hybrid_search(query=request.query, top_k=request.top_k * 4)
