@@ -1,15 +1,15 @@
 from fastapi import FastAPI, HTTPException
 from retrieval import dense_search, bm25_search,hybrid_search
-from models import HybridSearchResponse, SearchRequest , DenseSearchResponse
-
+from models import HybridSearchResponse, SearchRequest , DenseSearchResponse , LegalResponse
+import instructor
+from litellm import acompletion
 app = FastAPI()
-
 @app.get('/health')
-def get_health():
+async def get_health():
     return {"status":"ok"}
 
 @app.post("/search")
-def search(request: SearchRequest) -> DenseSearchResponse:
+async def search(request: SearchRequest) -> DenseSearchResponse:
     try:
         results =DenseSearchResponse(response=dense_search(request.query))
     except RuntimeError as e:
@@ -17,16 +17,34 @@ def search(request: SearchRequest) -> DenseSearchResponse:
 
     return results
 @app.post("/search/bm25")
-def search_bm25(request: SearchRequest) -> DenseSearchResponse:
+async def search_bm25(request: SearchRequest) -> DenseSearchResponse:
     try:
         results = DenseSearchResponse(response=bm25_search(request.query))
     except RuntimeError as e:
         raise HTTPException(status_code=503 , detail=str(e))
     return results
 @app.post("/search/hybrid")
-def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
+async def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
     try:
         results = HybridSearchResponse(response=hybrid_search(query=request.query,top_k=request.top_k *4))
     except RuntimeError as e:
         raise HTTPException(status_code=503 , detail=str(e))
     return results
+@app.post("/query")
+async def query_rag_system(request:SearchRequest) -> LegalResponse:
+        try:
+            results = HybridSearchResponse(response=hybrid_search(query=request.query,top_k=request.top_k *4))
+            #intitializing the client
+            client = instructor.from_litellm(completion=acompletion)
+            legalResponse = await client.chat.completions.create(
+                response_model=LegalResponse,
+                model='gpt-4o-mini',
+                messages=[
+                            {"role": "system", "content": "You are a legal assistant for Indian citizens. Answer based strictly on the provided legal context. Be plain, clear, and cite your sources."},
+                            {"role": "user", "content": f"Question: {request.query}\n\nContext:\n{results}"}
+                        ]
+            )
+
+        except RuntimeError as e:
+            raise HTTPException(status_code=503 , detail=str(e))
+        return legalResponse

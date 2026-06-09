@@ -17,3 +17,15 @@ class HybridSearch(BaseModel):
 
 class HybridSearchResponse(BaseModel):
     response: List[HybridSearch]
+
+class Citation(BaseModel):
+    text: str
+    source: str
+    score: float
+
+class LegalResponse(BaseModel):
+    answer: str
+    citations: List[Citation]
+    confidence: float
+    abstain: bool
+    abstain_reason: str | None = None

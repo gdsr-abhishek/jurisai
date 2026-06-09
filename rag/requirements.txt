@@ -9,3 +9,5 @@ qdrant-client
 fastapi[standard]
 rank-bm25
 python-dotenv
+litellm
+instructor
