@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from retrieval import dense_search, bm25_search,hybrid_search
 from models import HybridSearchResponse, SearchRequest , DenseSearchResponse , LegalResponse,Citation
-import instructor
 from litellm import acompletion
 import litellm
 from dotenv import load_dotenv
@@ -11,6 +10,14 @@ from tenacity import retry,wait_exponential,stop_after_attempt,retry_if_exceptio
 litellm._turn_on_debug()
 load_dotenv()
 
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=2, max=8),
+    retry=retry_if_exception_type((APIConnectionError, APITimeoutError))
+)
+async def call_llm(messages: list) -> str:
+    response = await acompletion(model="gpt-4o-mini", messages=messages)
+    return response.choices[0].message.content
 app = FastAPI()
 @app.get('/health')
 async def get_health():
@@ -38,15 +45,8 @@ async def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
     except RuntimeError as e:
         raise HTTPException(status_code=503 , detail=str(e))
     return results
-
-client = instructor.from_litellm(completion=acompletion)
 @app.post("/query")
 # @observe(name='jurisai-legal-query')
-@retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=1, max=8, min=2),
-    retry=retry_if_exception_type(APIConnectionError,RateLimitError)
-)
 async def query_rag_system(request: SearchRequest) -> LegalResponse:
     try:
         reranked = hybrid_search(query=request.query, top_k=request.top_k * 4)
@@ -63,14 +63,10 @@ async def query_rag_system(request: SearchRequest) -> LegalResponse:
             for i, chunk in enumerate(reranked)
         ])
         
-        response = await acompletion(
-            model="gpt-4o-mini",
-            messages=[
+        response = await call_llm(  messages=[
                 {"role": "system", "content": "You are a legal assistant for Indian citizens. Answer based strictly on the numbered context below. Be plain and clear."},
                 {"role": "user", "content": f"Question: {request.query}\n\nContext:\n{context}"}
-            ]
-        )
-
+            ])
         answer = response.choices[0].message.content
 
         legal_response = LegalResponse(
