@@ -5,7 +5,7 @@ import instructor
 from litellm import acompletion
 import litellm
 from dotenv import load_dotenv
-from langfuse.decorators import observe
+# from langfuse.decorators import observe
 from openai import APIConnectionError,RateLimitError,APITimeoutError
 from tenacity import retry,wait_exponential,stop_after_attempt,retry_if_exception_type
 litellm._turn_on_debug()
@@ -41,7 +41,7 @@ async def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
 
 client = instructor.from_litellm(completion=acompletion)
 @app.post("/query")
-@observe(name='jurisai-legal-query')
+# @observe(name='jurisai-legal-query')
 @retry(
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=1, max=8, min=2),
