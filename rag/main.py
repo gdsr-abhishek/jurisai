@@ -6,6 +6,8 @@ from litellm import acompletion
 import litellm
 from dotenv import load_dotenv
 from langfuse.decorators import observe
+from openai import APIConnectionError,RateLimitError,APITimeoutError
+from tenacity import retry,wait_exponential,stop_after_attempt,retry_if_exception_type
 litellm._turn_on_debug()
 load_dotenv()
 
@@ -40,10 +42,22 @@ async def search_hybrid(request: SearchRequest) -> HybridSearchResponse:
 client = instructor.from_litellm(completion=acompletion)
 @app.post("/query")
 @observe(name='jurisai-legal-query')
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, max=8, min=2),
+    retry=retry_if_exception_type(APIConnectionError,RateLimitError)
+)
 async def query_rag_system(request: SearchRequest) -> LegalResponse:
     try:
         reranked = hybrid_search(query=request.query, top_k=request.top_k * 4)
-        
+        if not reranked:
+            return LegalResponse(
+            answer="I could not find relevant legal information for your query.",
+            citations=[],
+            confidence=0.0,
+            abstain=True,
+            abstain_reason="No relevant chunks retrieved from the knowledge base"
+             )
         context = "\n\n".join([
             f"[{i+1}][{chunk.source}]: {chunk.text}"
             for i, chunk in enumerate(reranked)
@@ -67,7 +81,12 @@ async def query_rag_system(request: SearchRequest) -> LegalResponse:
             abstain_reason="Low retrieval confidence" if float(reranked[0].score) < 0.6 else None
         )
 
-    except RuntimeError as e:
+    except APITimeoutError as e:
         raise HTTPException(status_code=503, detail=str(e))
-    
+    except RateLimitError as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    except APIConnectionError as e:
+        raise HTTPException(status_code=503, detail=str(e))   
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e)) 
     return legal_response
