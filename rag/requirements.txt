@@ -15,6 +15,6 @@ opentelemetry-api
 opentelemetry-sdk 
 opentelemetry-exporter-otlp
 tenacity
-langfuse>=2.45.0
+langfuse==4.7.1
 openai
 httpx
