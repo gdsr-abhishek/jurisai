@@ -67,7 +67,7 @@ async def query_rag_system(request: SearchRequest) -> LegalResponse:
                 {"role": "system", "content": "You are a legal assistant for Indian citizens. Answer based strictly on the numbered context below. Be plain and clear."},
                 {"role": "user", "content": f"Question: {request.query}\n\nContext:\n{context}"}
             ])
-        answer = response.choices[0].message.content
+        answer = response
 
         legal_response = LegalResponse(
             answer=answer,
