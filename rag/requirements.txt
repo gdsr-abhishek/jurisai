@@ -18,3 +18,4 @@ tenacity
 langfuse==4.7.1
 openai
 httpx
+deepeval

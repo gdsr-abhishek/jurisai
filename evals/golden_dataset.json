@@ -1,0 +1,242 @@
+[
+    {
+        "id": "001",
+        "query": "What are the penalties for hacking under the IT Act?",
+        "expected_answer": "Under the IT Act, the penalties for hacking and related offenses can vary based on the specific violation. Here are key penalties:\n\n1. **Section 66** (Computer Related Offences): If a person dishonestly or fraudulently engages in activities as described in Section 43, they can face:\n   - Imprisonment for up to 3 years, or\n   - A fine up to 5 lakh rupees, or\n   - Both imprisonment and fine.\n\n2. **Section 65** (Tampering with Computer Source Documents): A person who conceals, destroys, or alters computer source code can be punished with:\n   - Imprisonment for up to 3 years, or\n   - A fine up to 2 lakh rupees, or\n   - Both imprisonment and fine.\n\n3. **Section 66C** (Identity Theft): Those who fraudulently use another's electronic signature or unique identification features can be punished with:\n   - Imprisonment for up to 3 years, and\n   - A fine up to 1 lakh rupees.\n\n4. **Section 66B** (Receiving Stolen Computer Resource): Anyone who dishonestly receives stolen computer resources can be punished with:\n   - Imprisonment for up to 3 years, or\n   - A fine up to 1 lakh rupees, or\n   - Both.\n\nThese penalties reflect the seriousness of hacking and related offences under the IT Act.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "easy"
+    },
+    {
+        "id": "002",
+        "query": "What is the punishment for identity theft under the IT Act?",
+        "expected_answer": "The punishment for identity theft under the IT Act is imprisonment for a term that may extend to three years, and the offender may also be liable to a fine that may extend to one lakh rupees.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "easy"
+    },
+    {
+        "id": "003",
+        "query": "What does Section 65 of the IT Act say about tampering with computer source documents?",
+        "expected_answer": "Section 65 of the IT Act states that whoever knowingly or intentionally conceals, destroys, or alters any computer source code required to be maintained by law, or causes someone else to do so, can face punishment. This includes imprisonment for up to three years, a fine up to two lakh rupees, or both. The term \"computer source code\" refers to the listings of programs, commands, design, layout, and analysis related to computer resources.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "easy"
+    },
+    {
+        "id": "004",
+        "query": "What is the punishment for cyber terrorism under the IT Act?",
+        "expected_answer": "Under the IT Act, the punishment for cyber terrorism is as follows:\n\n1. Whoever commits or conspires to commit cyber terrorism can face imprisonment.\n2. The imprisonment may extend to **life imprisonment**.\n\nThis applies if the individual intends to threaten the unity, integrity, security, or sovereignty of India or to instill terror in the people through various means as outlined in the Act.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "easy"
+    },
+    {
+        "id": "005",
+        "query": "What are the penalties for publishing obscene material in electronic form?",
+        "expected_answer": "The penalties for publishing or transmitting obscene material in electronic form under Section 67 of the IT Act are as follows:\n\n1. **First Conviction**: Imprisonment for a term that may extend up to **five years** and a fine that may extend up to **ten lakh rupees**.\n\n2. **Second or Subsequent Conviction**: Imprisonment for a term that may extend up to **seven years** and a fine that may extend up to **ten lakh rupees**.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "medium"
+    },
+    {
+        "id": "006",
+        "query": "What is the punishment for cheating by personation using a computer resource?",
+        "expected_answer": "The punishment for cheating by personation using a computer resource is imprisonment for up to three years, and a fine that may extend to one lakh rupees.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "medium"
+    },
+    {
+        "id": "007",
+        "query": "What does Section 66B say about receiving stolen computer resources?",
+        "expected_answer": "Section 66B of the Information Technology Act 2000 states that anyone who dishonestly receives or retains a stolen computer resource or communication device, knowing or having reason to believe that it is stolen, can face punishment. This punishment may include:\n\n- Imprisonment for a term that may extend to three years,\n- A fine that may extend to one lakh rupees,\n- Or both imprisonment and fine.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "medium"
+    },
+    {
+        "id": "008",
+        "query": "What is the punishment for violation of privacy under the IT Act?",
+        "expected_answer": "The punishment for violation of privacy under the IT Act (Section 66E) is imprisonment for a term that may extend to three years, or a fine not exceeding two lakh rupees, or both. This applies to anyone who intentionally or knowingly captures, publishes, or transmits the image of a private area of any person without their consent, under circumstances that violate that person's privacy.",
+        "expected_source": "it_act_2000_updated",
+        "domain": "cyber",
+        "difficulty": "medium"
+    },
+    {
+        "id": "009",
+        "query": "What is the time limit to respond to an RTI application?",
+        "expected_answer": "The time limit to respond to an RTI application is generally within thirty days of receiving the request. However, if the information requested concerns the life or liberty of a person, it must be provided within forty-eight hours. If there is a delay in response, the Public Information Officer is deemed to have refused the request.",
+        "expected_source": "RTI-2005_Nov_2025",
+        "domain": "rti",
+        "difficulty": "easy"
+    },
+    {
+        "id": "010",
+        "query": "What are the penalties for a Public Information Officer who refuses to provide information?",
+        "expected_answer": "The penalties for a Public Information Officer (PIO) who refuses to provide information include:\n\n1. A penalty of **Rs. 250** for each day of delay in furnishing information, up to a maximum of **Rs. 25,000**.\n2. If the PIO refuses to receive an application or does not provide information without reasonable cause, they may be subject to the same daily penalty and maximum limit.\n3. The PIO must be given a reasonable opportunity to present their case before any penalty is imposed.\n4. The burden of proof lies with the PIO to demonstrate that they acted reasonably and diligently in their duties. \n\nAdditionally, the concerned commission may require the public authority to compensate the complainant for any losses suffered.",
+        "expected_source": "RTI-2005_Nov_2025",
+        "domain": "rti",
+        "difficulty": "easy"
+    },
+    {
+        "id": "011",
+        "query": "Who can file an RTI application?",
+        "expected_answer": "Any person can file an RTI application. This includes individuals who have been unable to submit a request due to the absence of a designated Central or State Public Information Officer or those whose applications were refused.",
+        "expected_source": "RTI-2005_Nov_2025",
+        "domain": "rti",
+        "difficulty": "easy"
+    },
+    {
+        "id": "012",
+        "query": "What information is exempt from disclosure under the RTI Act?",
+        "expected_answer": "Under the RTI Act, the following information is exempt from disclosure:\n\n1. Information that prejudicially affects the sovereignty and integrity of India, its security, strategic, scientific, or economic interests, or relations with foreign states, or may incite an offense.\n2. Information that has been expressly forbidden to be published by any court or tribunal, or that could constitute contempt of court.\n3. Information received in confidence from a foreign government.\n4. Information whose disclosure would endanger the life or physical safety of any person or would reveal the source of information provided in confidence for law enforcement or security purposes.\n5. Information that would impede the process of investigation or prosecution of offenders.\n6. Cabinet papers, including records of deliberations of the Council of Ministers and other officers, though decisions of the Council of Ministers may be made public once finalized.\n7. Personal information that does not pertain to the public interest.\n\nThese exemptions reflect the balance between the right to information and the protection of certain sensitive interests.",
+        "expected_source": "RTI-2005_Nov_2025",
+        "domain": "rti",
+        "difficulty": "medium"
+    },
+    {
+        "id": "013",
+        "query": "What is the procedure to appeal under the RTI Act?",
+        "expected_answer": "To appeal under the RTI Act, follow these steps:\n\n1. **File the Appeal**: If you are dissatisfied with the response of the public authority, you can file an appeal before the Central Information Commission (CIC) or State Information Commission (SIC) depending on the authority.\n\n2. **Timeline**: You must file your appeal within 30 days from the date you received a decision or response from the public authority.\n\n3. **Notice of Decision**: Both the complainant and the public authority will receive a notice of the decision regarding the appeal.\n\n4. **Procedure**: The CIC or SIC will decide the appeal according to the prescribed procedures, which are laid down in the RTI Act.\n\n5. **Outcome**: The Commission may direct the public authority to comply with the RTI Act, provide the requested information, grant compensation, impose penalties, or reject the application.\n\nEnsure that you prepare and submit your appeal clearly, stating the reasons for your dissatisfaction with the initial response.",
+        "expected_source": "RTI-2005_Nov_2025",
+        "domain": "rti",
+        "difficulty": "medium"
+    },
+    {
+        "id": "014",
+        "query": "What is the maximum penalty under the RTI Act?",
+        "expected_answer": "The maximum penalty under the RTI Act is ₹25,000. This penalty can be imposed for failing to receive an application for information, not furnishing information in a timely manner, malafidely denying information, providing incorrect or misleading information, or obstructing the furnishing of information. Penalties may accumulate at a rate of ₹250 per day until the application is processed or information is provided, but cannot exceed ₹25,000 in total.",
+        "expected_source": "RTI-2005_Nov_2025",
+        "domain": "rti",
+        "difficulty": "medium"
+    },
+    {
+        "id": "015",
+        "query": "What is the full form of POCSO and what does it protect against?",
+        "expected_answer": "The full form of POCSO is the \"Protection of Children from Sexual Offences.\" It protects against sexual offenses committed against children, including various forms of sexual assault, penetrative sexual assault, and sexual harassment.",
+        "expected_source": "POCSO",
+        "domain": "pocso",
+        "difficulty": "hard"
+    },
+    {
+        "id": "016",
+        "query": "What are the penalties for penetrative sexual assault under POCSO?",
+        "expected_answer": "Under the POCSO Act, the penalties for penetrative sexual assault are as follows:\n\n1. **Penetrative Sexual Assault**: \n   - The punishment is imprisonment for a term of no less than **ten years** and may extend to **life imprisonment**. The individual may also be liable to a fine.\n\n2. **Aggravated Penetrative Sexual Assault**:\n   - If the assault involves making the child strip or parade naked in public, the punishment is more severe: a minimum of **twenty years** of rigorous imprisonment, which may also extend to **life imprisonment** (meaning imprisonment for the remainder of the natural life of the individual), and can include the death penalty. Additionally, a fine will be imposed, which must be just and reasonable, to assist the victim with medical expenses and rehabilitation.\n\n3. **Specific Case**: If the offence is committed against a child below sixteen years of age, the punishment remains the same as for aggravated penetrative sexual assault, emphasizing the seriousness of the crime against younger victims.\n\nIn all cases, the fines are intended to support the victim's medical and rehabilitation needs.",
+        "expected_source": "POCSO",
+        "domain": "pocso",
+        "difficulty": "easy"
+    },
+    {
+        "id": "017",
+        "query": "What is the age of a child as defined under POCSO?",
+        "expected_answer": "Under the POCSO (Protection of Children from Sexual Offences) Act, a \"child\" is defined as any person below the age of eighteen years.",
+        "expected_source": "POCSO",
+        "domain": "pocso",
+        "difficulty": "easy"
+    },
+    {
+        "id": "018",
+        "query": "What are the special courts under POCSO?",
+        "expected_answer": "The special courts under the POCSO Act (Protection of Children from Sexual Offences Act, 2012) are designated by the State Government in consultation with the Chief Justice of the High Court. These courts are established to ensure a speedy trial for offences under the Act. Key points about these special courts include:\n\n1. **Designation**: Each district has a designated Court of Session that functions as a Special Court for cases under the POCSO Act.\n\n2. **Jurisdiction**: The Special Courts also have jurisdiction over certain offences under other laws that relate to the abuse of children, such as those concerned with the publication of sexually explicit material involving children.\n\n3. **Procedure**: The courts are empowered to take cognizance of offences without the accused being committed for trial, based on complaints or police reports. They provide a child-friendly environment during trials.\n\n4. **Conducting Trials**: Trials are conducted in camera (in private) and with provisions to ensure the comfort and safety of the child victim, including allowing supportive persons to be present and permitting breaks if needed.\n\n5. **Special Public Prosecutors**: Each Special Court has a designated Special Public Prosecutor, appointed by the State Government, who is specifically responsible for prosecuting cases under the POCSO Act.\n\nOverall, these courts aim to provide a sensitive and efficient legal process for the protection and welfare of children.",
+        "expected_source": "POCSO",
+        "domain": "pocso",
+        "difficulty": "medium"
+    },
+    {
+        "id": "019",
+        "query": "What is the punishment for aggravated penetrative sexual assault under POCSO?",
+        "expected_answer": "The punishment for aggravated penetrative sexual assault under the POCSO Act is:\n\n1. A minimum of twenty years of rigorous imprisonment.\n2. This imprisonment may extend to life imprisonment, which means imprisonment for the remainder of the person's natural life.\n3. The offender is also liable to pay a fine.\n4. In some cases, the punishment may be death. \n\nAdditionally, any fine imposed is intended to be just and reasonable, and it will be paid to the victim to cover medical expenses and rehabilitation.",
+        "expected_source": "POCSO",
+        "domain": "pocso",
+        "difficulty": "medium"
+    },
+    {
+        "id": "020",
+        "query": "What does POCSO say about mandatory reporting of offences?",
+        "expected_answer": "Under the POCSO Act, any person (including a child) who suspects or has knowledge that an offence against a child has been committed must report this information to either the Special Juvenile Police Unit or the local police. The report must be documented clearly, and if made by a child, it should be recorded in simple language that the child can understand.\n\nFailure to report such offences can lead to legal consequences. Specifically, individuals who do not report are subject to imprisonment for up to six months, a fine, or both. For those in charge of institutions who fail to report on behalf of a subordinate, the punishment can extend to one year of imprisonment and a fine. \n\nAdditionally, anyone providing this information in good faith is protected from any civil or criminal liability.",
+        "expected_source": "POCSO",
+        "domain": "pocso",
+        "difficulty": "medium"
+    },
+    {
+        "id": "021",
+        "query": "What are the rights of a consumer under the Consumer Protection Act?",
+        "expected_answer": "Under the Consumer Protection Act, 2019, consumers have the following rights:\n\n1. **Right to Protection**: Consumers are entitled to protection against hazardous goods and services.\n\n2. **Right to Information**: Consumers have the right to be informed about the quality, quantity, potency, purity, standard, and price of goods or services to make informed choices.\n\n3. **Right to Choice**: Consumers have the right to choose from a variety of products and services at competitive prices.\n\n4. **Right to Hearing**: Consumers are entitled to a fair hearing in case of any dispute or complaint about goods and services.\n\n5. **Right to Redress**: Consumers have the right to seek compensation for losses or damages suffered due to unfair trade practices or defective goods.\n\n6. **Right to Consumer Education**: Consumers have the right to be educated about their rights and responsibilities.\n\nThe Central Consumer Protection Authority (CCPA) is empowered to regulate and enforce these rights, addressing violations and unfair trade practices.",
+        "expected_source": "CPA-2019",
+        "domain": "consumer",
+        "difficulty": "easy"
+    },
+    {
+        "id": "022",
+        "query": "What is the procedure to file a consumer complaint?",
+        "expected_answer": "To file a consumer complaint in India, follow these steps:\n\n1. **Identify the Authority**: Determine the appropriate authority to address your complaint, which could be the District Commission, State Commission, or National Commission, depending on the value and nature of your complaint.\n\n2. **Prepare Your Complaint**: Draft a complaint detailing the violation of consumer rights, unfair trade practices, or misleading advertisements. Include:\n   - Your name and address\n   - Details of the opposite party\n   - Facts of the case\n   - Relief sought\n\n3. **Mode of Submission**: File your complaint either in writing or electronically. Ensure that you are clear and concise.\n\n4. **Submit the Complaint**: File the complaint with the relevant Commission. You may need to submit a copy to the opposite party, which they will then have to respond to within 30 days (which can be extended by an additional 15 days).\n\n5. **Await Response**: If the opposite party denies the allegations or fails to respond, the Commission will proceed to settle the dispute based on the evidence provided by you.\n\n6. **Hearing**: Attend the hearing set by the Commission. If you don’t appear, the case may still be decided based on the merits.\n\n7. **Follow-up**: If required, you may be asked to submit evidence or documents to back your complaint during the process.\n\nBy adhering to these steps, you can effectively file a consumer complaint in India.",
+        "expected_source": "CPA-2019",
+        "domain": "consumer",
+        "difficulty": "easy"
+    },
+    {
+        "id": "023",
+        "query": "What are the penalties for misleading advertisements under the Consumer Protection Act?",
+        "expected_answer": "Under the Consumer Protection Act, the penalties for misleading advertisements are as follows:\n\n1. **For manufacturers or service providers**:\n   - First offence: Imprisonment of up to **two years** and a fine of up to **ten lakh rupees**.\n   - Subsequent offences: Imprisonment of up to **five years** and a fine of up to **fifty lakh rupees**.\n\n2. **For endorsers (those promoting the advertisement)**:\n   - A penalty may be imposed up to **ten lakh rupees** for misleading advertisements. \n   - For subsequent offences, the penalty may increase to **fifty lakh rupees**.\n   - Endorsers may also be prohibited from making endorsements for specified periods (up to **three years** for subsequent contraventions).\n\n3. **General non-compliance penalties**:\n   - Failure to comply with directives from the Central Authority can lead to imprisonment for up to **six months** and a fine of up to **twenty lakh rupees**. \n\nThese penalties emphasize the seriousness of misleading advertisements and aim to protect consumer interests.",
+        "expected_source": "CPA-2019",
+        "domain": "consumer",
+        "difficulty": "easy"
+    },
+    {
+        "id": "024",
+        "query": "What is the time limit to file a consumer complaint?",
+        "expected_answer": "The time limit to file a consumer complaint is not explicitly stated in the provided context. However, once a complaint is received by the District Commission, the opposite party is directed to respond within a period of thirty days, which can be extended up to an additional fifteen days. \n\nIt’s important to check with the appropriate consumer forum or legal resources for specific time limits related to filing a complaint, as these may vary based on the nature of the complaint and local regulations.",
+        "expected_source": "CPA-2019",
+        "domain": "consumer",
+        "difficulty": "medium"
+    },
+    {
+        "id": "025",
+        "query": "What is the pecuniary jurisdiction of the District Consumer Commission?",
+        "expected_answer": "The pecuniary jurisdiction of the District Consumer Commission is not explicitly stated in the provided context. However, typically, the District Commission handles consumer disputes involving claims up to a certain monetary limit, which may be defined by state regulations or government notifications. To find the exact limit, you may need to refer to the specific rules or notifications issued by the State Government under the Consumer Protection Act in your state.",
+        "expected_source": "CPA-2019",
+        "domain": "consumer",
+        "difficulty": "medium"
+    },
+    {
+        "id": "026",
+        "query": "What is the definition of an industrial dispute under the Industrial Disputes Act?",
+        "expected_answer": "An industrial dispute is defined under the Industrial Disputes Act, 1947, as any disagreement or difference of opinion between employees and employers, or between employers and workmen, specifically related to employment, non-employment, terms of employment, or conditions of labor for any person. This definition encompasses conflicts that can lead to strikes or lockouts.",
+        "expected_source": "Labour-Act",
+        "domain": "labour",
+        "difficulty": "easy"
+    },
+    {
+        "id": "027",
+        "query": "What are the conditions for a lawful strike under the Labour Act?",
+        "expected_answer": "The conditions for a lawful strike under the Labour Act include:\n\n1. The strike must not be deemed illegal under the Industrial Disputes Act, 1947.\n2. It should be connected with employment or non-employment, the terms of employment, or the conditions of labor.\n3. The strike should not involve acts of force or violence.\n4. Workmen should not be coerced in the exercise of their right to self-organization or to join a trade union.\n5. The strike should be in response to an employer's unfair labor practices such as failure to implement an award, settlement, or agreement.\n\nIf any of these conditions are violated, the strike may be considered illegal.",
+        "expected_source": "Labour-Act",
+        "domain": "labour",
+        "difficulty": "easy"
+    },
+    {
+        "id": "028",
+        "query": "What is retrenchment under the Industrial Disputes Act?",
+        "expected_answer": "Retrenchment under the Industrial Disputes Act refers to the process of reducing the workforce in an industrial establishment. This typically involves terminating the employment of workers as a cost-cutting measure due to financial constraints, business decisions, or other reasons. \n\nThe Act mandates that prior permission from the appropriate government authority must be obtained before laying off or retrenching any workers. Additionally, retrenched workers are entitled to compensation as provided by the Act. The primary objectives of this regulation are to ensure fair treatment of workers and to prevent unfair labour practices by employers in relation to lay-offs and retrenchments.",
+        "expected_source": "Labour-Act",
+        "domain": "labour",
+        "difficulty": "easy"
+    },
+    {
+        "id": "029",
+        "query": "What are the penalties for illegal strikes under the Labour Act?",
+        "expected_answer": "Penalties for illegal strikes under the Labour Act are as follows:\n\n1. **Workman participation in an illegal strike (Section 26(1))**:\n   - Imprisonment for up to **1 month** and/or a fine of up to **Rs. 50**.\n\n2. **Instigation of illegal strike (Section 27)**:\n   - Imprisonment for **up to 6 months** and/or a fine of up to **Rs. 1000**.\n\n3. **Financial assistance to support an illegal strike (Section 28)**:\n   - Imprisonment for **up to 6 months** and/or a fine of up to **Rs. 1000**.\n\nThese penalties apply to workmen and individuals involved in furthering illegal strikes as defined by the Act.",
+        "expected_source": "Labour-Act",
+        "domain": "labour",
+        "difficulty": "medium"
+    },
+    {
+        "id": "030",
+        "query": "What is the procedure for lay-off under the Industrial Disputes Act?",
+        "expected_answer": "The procedure for lay-off under the Industrial Disputes Act includes the following steps:\n\n1. **Prior Permission**: Employers must obtain prior permission from the appropriate government or concerned labour authority before laying off any workers. This applies to cases of lay-off, retrenchment, or closure of industrial establishments.\n\n2. **Payment of Compensation**: If a lay-off occurs, the employer is obliged to pay compensation to the affected workmen. This is outlined in the Act to ensure financial support during the lay-off period.\n\n3. **Regulatory Compliance**: Employers must comply with the provisions set forth in the Industrial Disputes Act and any relevant Labour laws, which include ensuring transparency and adherence to specified procedures when implementing a lay-off.\n\nThese steps are designed to secure industrial peace and harmonize employer-employee relations within the workforce.",
+        "expected_source": "Labour-Act",
+        "domain": "labour",
+        "difficulty": "medium"
+    }
+]

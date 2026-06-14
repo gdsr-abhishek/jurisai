@@ -112,6 +112,34 @@ Format:
 ```
 
 ---
+---
+## Baseline eval — Week 3 (2026-06-15)
+
+| Metric | Score | Pass Rate | Threshold |
+|---|---|---|---|
+| Faithfulness | 0.96 | 93.33% | 0.7 |
+| Contextual Recall | 0.84 | 80.00% | 0.7 |
+| Overall | — | 76.67% | — |
+
+30 queries. 23 passed. 7 failed. Cost: $1.14 per run.
+
+## Failure modes identified
+
+| ID | Query | Failure | Root cause |
+|---|---|---|---|
+| 10 | Who can file RTI? | Contextual recall 0.50 | Missing introductory section chunk |
+| 12 | RTI appeal procedure | Contextual recall 0.50 | Missing specific sections on filing + 30-day limit |
+| 15 | POCSO penetrative assault | Faithfulness 0.50 | LLM overstated natural life definition scope |
+| 20 | Consumer rights | Contextual recall 0.14 | Rights enumeration not in retrieved chunks |
+| 21 | Consumer complaint procedure | Contextual recall 0.56 | Partial chunk coverage, LLM inferred missing steps |
+| 23 | Consumer complaint time limit | Both fail | LLM hallucinated 2-year limit not in corpus |
+| 24 | District Commission jurisdiction | Contextual recall 0.33 | Pecuniary limit not in corpus |
+
+## Week 4 fix targets
+1. Tighten system prompt — no inference beyond retrieved context
+2. Review chunking of introductory/definition sections
+3. Mark out-of-corpus queries — exclude from recall metrics
+---
 
 > **Rule:** every retrieval change gets a before/after number in this file.
 > No change ships without a measured improvement.
