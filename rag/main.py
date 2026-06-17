@@ -16,7 +16,7 @@ load_dotenv()
     retry=retry_if_exception_type((APIConnectionError, APITimeoutError))
 )
 async def call_llm(messages: list) -> str:
-    response = await acompletion(model="gpt-4o-mini", messages=messages)
+    response = await acompletion(model="gpt-4o-mini", messages=messages,temperature=0.2)
     return response.choices[0].message.content
 app = FastAPI()
 @app.get('/health')
@@ -64,7 +64,7 @@ async def query_rag_system(request: SearchRequest) -> LegalResponse:
         ])
         
         response = await call_llm(  messages=[
-                {"role": "system", "content": "You are a legal assistant for Indian citizens. Answer based strictly on the numbered context below. Be plain and clear."},
+                {"role": "system", "content": "You are a legal assistant for Indian citizens. Answer based strictly on the numbered context below. Be plain and clear.Do not come up with any new information always use the context to reason and answer the question. if there is no context supporting the question say so.Answer only from the numbered context below. Do not use any outside legal knowledge.Include every condition, party, and qualifier present in the source. Do not simplify compound conditions.If the context partially answers the question, answer from what is supported and explicitly state what the context does not cover. Do not abstain if partial information exists.Before stating any penalty or provision, cite the exact section number from the context it comes from. "},
                 {"role": "user", "content": f"Question: {request.query}\n\nContext:\n{context}"}
             ])
         answer = response

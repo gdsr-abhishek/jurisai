@@ -238,5 +238,95 @@
         "expected_source": "Labour-Act",
         "domain": "labour",
         "difficulty": "medium"
+    },
+    {
+        "id":"031",
+        "query":"What does Section 78 of the IT Act say about power to investigate offences?",
+        "expected_answer":"",
+        "expected_source":"it_act_2000_updated",
+        "domain":"cyber",
+        "difficulty":"easy"
+
+    },
+    {
+        "id":"032",
+        "query":"What are the penalties for sending offensive messages through a communication service under the IT Act?",
+        "expected_answer":"",
+        "expected_source":"it_act_2000_updated",
+        "domain":"cyber",
+        "difficulty":"easy"
+
+    },
+    {
+        "id":"033",
+        "query":"What does Section 72 of the IT Act say about breach of confidentiality and privacy?",
+        "expected_answer":"",
+        "expected_source":"it_act_2000_updated",
+        "domain":"cyber",
+        "difficulty":"easy"
+
+    },
+    {
+        "id":"034",
+        "query":"What is the punishment for publishing material containing sexually explicit acts in electronic form under the IT Act?",
+        "expected_answer":"",
+        "expected_source":"it_act_2000_updated",
+        "domain":"cyber",
+        "difficulty":"medium"
+
+    },
+    {
+        "id":"035",
+        "query":"What does Section 84B say about punishment for abetment of offences under the IT Act?",
+        "expected_answer":"",
+        "expected_source":"it_act_2000_updated",
+        "domain":"cyber",
+        "difficulty":"medium"
+
+    },
+    {
+        "id":"036",
+        "query":"What are the penalties for illegal lockouts under the Industrial Disputes Act?",
+        "expected_answer":"",
+        "expected_source":"Labour-Act",
+        "domain":"labour",
+        "difficulty":"easy"
+
+    },
+    {
+        "id":"037",
+        "query":"What is the procedure for registering a trade union under the Trade Unions Act?",
+        "expected_answer":"",
+        "expected_source":"Labour-Act",
+        "domain":"labour",
+        "difficulty":"medium"
+
+    },
+    {
+        "id":"038",
+        "query":"What are the unfair labour practices prohibited under the Industrial Disputes Act?",
+        "expected_answer":"",
+        "expected_source":"Labour-Act",
+        "domain":"labour",
+        "difficulty":"medium"
+
+    },
+    {
+        "id":"039",
+        "query":"What is the penalty for lay-off or retrenchment without prior permission under the Industrial Disputes Act?",
+        "expected_answer":"",
+        "expected_source":"Labour-Act",
+        "domain":"labour",
+        "difficulty":"easy"
+
+    },
+    {
+        "id":"040",
+        "query":"What does the Industrial Disputes Act say about closure of an industrial establishment?",
+        "expected_answer":"",
+        "expected_source":"Labour-Act",
+        "domain":"labour",
+        "difficulty":"medium"
+
     }
 ]
