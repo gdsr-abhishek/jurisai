@@ -242,7 +242,7 @@
     {
         "id":"031",
         "query":"What does Section 78 of the IT Act say about power to investigate offences?",
-        "expected_answer":"",
+        "expected_answer":"78. Power to investigate offences .–Notwithstanding anything contained in the Code of Criminal \nProcedure, 1973 (2 of 1974), a police officer not below the rank of 1[Inspector] shall investigate any \noffence under this Act. \n2[CHAPTER XII \nINTERMEDIARIES NOT TO BE LIABLE IN CERTAIN CASES \n79. Exemption from liability of intermediary in certain cases .–(1) Notwithstanding anything \ncontained in any law for the time being in force but subject to the provisions of sub -sections (2) and (3), \nan intermediary shall not be liable for any third party information, data, or communication link made \navailable or hosted by him. \n(2) The provisions of sub-section",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"easy"
@@ -251,7 +251,7 @@
     {
         "id":"032",
         "query":"What are the penalties for sending offensive messages through a communication service under the IT Act?",
-        "expected_answer":"",
+        "expected_answer":"Whoever intentionally insults in any manner, and thereby gives provocation to\nany person, intending or knowing it to be likely that such provocation will cause him to break\nthe public peace, or to commit any other offence, shall be punished with imprisonment of\neither description for a term which may extend to two years, or with fine, or with both",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"easy"
@@ -269,7 +269,7 @@
     {
         "id":"034",
         "query":"What is the punishment for publishing material containing sexually explicit acts in electronic form under the IT Act?",
-        "expected_answer":"",
+        "expected_answer":"electronic form any material which contains sexually explicit act or conduct shall be punished on first \nconviction with imprisonment of either description for a term which may extend to five years",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"medium"
@@ -278,7 +278,7 @@
     {
         "id":"035",
         "query":"What does Section 84B say about punishment for abetment of offences under the IT Act?",
-        "expected_answer":"",
+        "expected_answer":"committed in consequence of the abetment, shall be punished with punishment provided for that offence. \nExplanation.— An act or offence is said to be committed in consequence of abetment, when it is \ncommitted in consequence of  the instigation, or in pursuance of the conspiracy or with the aid, which \nconstitutes the abetment. \n18. Punishment for  attempt to commit an offence. —Whoever attempts to commit any offence \npunishable under this Act or to  cause such an offence to be committed, and in such attempt, does any act \ntowards the commission of the offence, shall be  punished with imprisonment of any description provided \nfor the offence, for a term which may extend to one half of the  imprisonment for life or, as the case may \nbe, one-half of the longest term of imprisonment provided for that offence or with fineor with both.",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"medium"
@@ -287,7 +287,7 @@
     {
         "id":"036",
         "query":"What are the penalties for illegal lockouts under the Industrial Disputes Act?",
-        "expected_answer":"",
+        "expected_answer":"fine upto Rs. 1000.  \n  \nSec.26 (1)  Illegal str ikes by a workman - workman who \ncommences, continues or otherwise acts in \nfurtherance, of, a strike which is illegal under \nthat Act  \nImprisonment for 1 month and / or \nfine upto Rs. 50.  \n  \nSec.26 (2)  Illegal lockout -employer who commences, \ncontinues, or otherwise acts in furtherance of \na lock-out which is illegal under this Act  \nImprisonment for 1 month and / or \nfine upto Rs. 1000.    \nSec.27  Instigation - Any person who instigates or \nincites others to take part in, or otherwise acts \nImprisonment for 6 month and / or \nfine upto Rs. 1000.  \n  78 \n \nin furtherance of, a  strike or lock -out which is \nillegal under that Act  \nSec.28  Financial Assistance to a Strike - Any person \nwho knowingly expends or applies any money \nin direct furtherance or support of any illegal \nstrike or lock-out  \nImprisonment for 6 month and / or \nfine upto Rs. 1000.  \n  \nSec.29  Breach of settlement or award binding under \nthe act",
         "expected_source":"Labour-Act",
         "domain":"labour",
         "difficulty":"easy"
@@ -296,7 +296,7 @@
     {
         "id":"037",
         "query":"What is the procedure for registering a trade union under the Trade Unions Act?",
-        "expected_answer":"",
+        "expected_answer":"certain rights and privileges under the Act. Minimum seven workers of an establishment (or seven \nemployers) can form a trade union and apply to the Registrar for it registration.  \n The application for registration should be in the prescribed form and accompanied by the \nprescribed fee, a copy of the rules of the union signed by at least 7 members, and a \nstatement containing  \n(a) the names, addresses and occupations of the members making the application,  \n(b) the name of the trade union and the addresses of its head office, and  \n(c) the titles, names, ages, addresses and occupations of its office bearers. \n If the unio n has been in existence for more than a year, then a statement of its assets and \nliabilities in the prescribed form should be submitted along with the application. \n The registrar may call for further information for satisfying himself that the application i s \ncomplete and is in accordance with the provisions, and that the proposed name does not \nresemble",
         "expected_source":"Labour-Act",
         "domain":"labour",
         "difficulty":"medium"
@@ -305,7 +305,7 @@
     {
         "id":"038",
         "query":"What are the unfair labour practices prohibited under the Industrial Disputes Act?",
-        "expected_answer":"",
+        "expected_answer":"11. To discharge or discriminate against any workmen for filing charges or testi fying against \nemployer in any enquiry or proceeding relating to any industrial dispute. \n12. To recruit workmen during a strike which is not an illegal strike. \n13. Failure to implement award, settlement or agreement. \n14. To indulge in acts of force or violence. \n15. To refuse to bargain collectively, in good faith with the recognized trade unions. \n16. Proposing or continuing a lock out deemed to be illegal under this act. \nIf the employer of any establishment commits any of these acts then he will be liable fo r an offence \nof unfair labour practice. \n \nUnfair labour practices on the part of workmen and trade unions of workmen 147 \n \n1.  To advise or actively support or instigate any strike deemed to be illegal   under the Industrial \nDisputes Act, 1947. \n2.  To coerce workm en in the exercise of their right to self -organization or to join a trade union or the managerial or the other staff. \n3. To stage demonstrations at the residences of the employers or the managerial staff \nmembers. \n4. To incite or indulge in willful damage to employer’s property connected with industry. \n5. To indulge in the acts of force or violence or to hold out threats of intimidation against \nany workman with a view to prevent him from attending work.  \nPunishment for committing unfair labour practice \nAccording to Section 25U of the Industrial D isputes Act, 1947, any person who commits any unfair \nlabour practice will be punishable with imprisonment for a term which may extend to six months or \nwith fine which may extend to one thousand rupees or with both. \n \n7. LABOUR LAWS IN THE UNORGANIZED SECTOR \nThe unorganized sector can be defined as that part of the work force that have not been able to \norganize itself in pursuit of a common objective because of certain constraints such as casual nature 148",
         "expected_source":"Labour-Act",
         "domain":"labour",
         "difficulty":"medium"
@@ -314,7 +314,7 @@
     {
         "id":"039",
         "query":"What is the penalty for lay-off or retrenchment without prior permission under the Industrial Disputes Act?",
-        "expected_answer":"",
+        "expected_answer":"Lay-Off or Retrenchment without prior \npermission - Contravening the provisions of \nSection 25-M or 25-(N)  \nWorkman entitled to all benefits as if \nthey had not been laid off. Employer \nshall be punishable with \nimprisonment upto 1 month and / or \nfine upto Rs. 1000.",
         "expected_source":"Labour-Act",
         "domain":"labour",
         "difficulty":"easy"
