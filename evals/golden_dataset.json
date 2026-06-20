@@ -74,7 +74,7 @@
     {
         "id": "010",
         "query": "What are the penalties for a Public Information Officer who refuses to provide information?",
-        "expected_answer": "The penalties for a Public Information Officer (PIO) who refuses to provide information include:\n\n1. A penalty of **Rs. 250** for each day of delay in furnishing information, up to a maximum of **Rs. 25,000**.\n2. If the PIO refuses to receive an application or does not provide information without reasonable cause, they may be subject to the same daily penalty and maximum limit.\n3. The PIO must be given a reasonable opportunity to present their case before any penalty is imposed.\n4. The burden of proof lies with the PIO to demonstrate that they acted reasonably and diligently in their duties. \n\nAdditionally, the concerned commission may require the public authority to compensate the complainant for any losses suffered.",
+        "expected_answer": "If a Central or State Public Information Officer, without reasonable cause, refuses to receive an application, fails to furnish information within the specified time, malafidely denies a request, knowingly gives incorrect or misleading information, destroys information, or obstructs furnishing of information, a penalty of Rs. 250 per day shall be imposed until the application is received or information is furnished. The total penalty shall not exceed Rs. 25,000. The officer must be given a reasonable opportunity to be heard, and the burden of proving reasonable and diligent conduct lies with the officer.",
         "expected_source": "RTI-2005_Nov_2025",
         "domain": "rti",
         "difficulty": "easy"
@@ -82,7 +82,7 @@
     {
         "id": "011",
         "query": "Who can file an RTI application?",
-        "expected_answer": "Any person can file an RTI application. This includes individuals who have been unable to submit a request due to the absence of a designated Central or State Public Information Officer or those whose applications were refused.",
+        "expected_answer": "",
         "expected_source": "RTI-2005_Nov_2025",
         "domain": "rti",
         "difficulty": "easy"
@@ -90,7 +90,7 @@
     {
         "id": "012",
         "query": "What information is exempt from disclosure under the RTI Act?",
-        "expected_answer": "Under the RTI Act, the following information is exempt from disclosure:\n\n1. Information that prejudicially affects the sovereignty and integrity of India, its security, strategic, scientific, or economic interests, or relations with foreign states, or may incite an offense.\n2. Information that has been expressly forbidden to be published by any court or tribunal, or that could constitute contempt of court.\n3. Information received in confidence from a foreign government.\n4. Information whose disclosure would endanger the life or physical safety of any person or would reveal the source of information provided in confidence for law enforcement or security purposes.\n5. Information that would impede the process of investigation or prosecution of offenders.\n6. Cabinet papers, including records of deliberations of the Council of Ministers and other officers, though decisions of the Council of Ministers may be made public once finalized.\n7. Personal information that does not pertain to the public interest.\n\nThese exemptions reflect the balance between the right to information and the protection of certain sensitive interests.",
+        "expected_answer": "Under Section 8(1) of the RTI Act, the following information is exempt from disclosure: (a) information that would prejudicially affect the sovereignty, integrity, security, strategic, scientific or economic interests of India, relations with foreign states, or lead to incitement of an offence; (b) information expressly forbidden by any court or tribunal, or whose disclosure may constitute contempt of court; (f) information received in confidence from a foreign government; (g) information whose disclosure would endanger the life or physical safety of any person or reveal a confidential source of law enforcement information; (h) information that would impede investigation or prosecution of offenders; (i) cabinet papers including records of deliberations of the Council of Ministers, though decisions may be made public once finalized; (j) information relating to personal information.",
         "expected_source": "RTI-2005_Nov_2025",
         "domain": "rti",
         "difficulty": "medium"
@@ -154,7 +154,7 @@
     {
         "id": "020",
         "query": "What does POCSO say about mandatory reporting of offences?",
-        "expected_answer": "Under the POCSO Act, any person (including a child) who suspects or has knowledge that an offence against a child has been committed must report this information to either the Special Juvenile Police Unit or the local police. The report must be documented clearly, and if made by a child, it should be recorded in simple language that the child can understand.\n\nFailure to report such offences can lead to legal consequences. Specifically, individuals who do not report are subject to imprisonment for up to six months, a fine, or both. For those in charge of institutions who fail to report on behalf of a subordinate, the punishment can extend to one year of imprisonment and a fine. \n\nAdditionally, anyone providing this information in good faith is protected from any civil or criminal liability.",
+        "expected_answer": "Under Section 19 of the POCSO Act, any person including a child who has apprehension that an offence is likely to be committed or has knowledge that an offence has been committed shall provide such information to the Special Juvenile Police Unit or the local police. Every report shall be ascribed an entry number and recorded in writing, read over to the informant, and entered in a book kept by the Police Unit. Where the report is given by a child, it shall be recorded in simple language so the child understands the contents.",
         "expected_source": "POCSO",
         "domain": "pocso",
         "difficulty": "medium"
@@ -162,7 +162,7 @@
     {
         "id": "021",
         "query": "What are the rights of a consumer under the Consumer Protection Act?",
-        "expected_answer": "Under the Consumer Protection Act, 2019, consumers have the following rights:\n\n1. **Right to Protection**: Consumers are entitled to protection against hazardous goods and services.\n\n2. **Right to Information**: Consumers have the right to be informed about the quality, quantity, potency, purity, standard, and price of goods or services to make informed choices.\n\n3. **Right to Choice**: Consumers have the right to choose from a variety of products and services at competitive prices.\n\n4. **Right to Hearing**: Consumers are entitled to a fair hearing in case of any dispute or complaint about goods and services.\n\n5. **Right to Redress**: Consumers have the right to seek compensation for losses or damages suffered due to unfair trade practices or defective goods.\n\n6. **Right to Consumer Education**: Consumers have the right to be educated about their rights and responsibilities.\n\nThe Central Consumer Protection Authority (CCPA) is empowered to regulate and enforce these rights, addressing violations and unfair trade practices.",
+        "expected_answer": "The context does not explicitly list the individual rights of consumers under the Consumer Protection Act. The retrieved context covers the establishment and functions of the Central Consumer Protection Authority and District Consumer Protection Councils, but does not enumerate specific consumer rights such as the right to safety, information, or choice.",
         "expected_source": "CPA-2019",
         "domain": "consumer",
         "difficulty": "easy"
@@ -170,7 +170,7 @@
     {
         "id": "022",
         "query": "What is the procedure to file a consumer complaint?",
-        "expected_answer": "To file a consumer complaint in India, follow these steps:\n\n1. **Identify the Authority**: Determine the appropriate authority to address your complaint, which could be the District Commission, State Commission, or National Commission, depending on the value and nature of your complaint.\n\n2. **Prepare Your Complaint**: Draft a complaint detailing the violation of consumer rights, unfair trade practices, or misleading advertisements. Include:\n   - Your name and address\n   - Details of the opposite party\n   - Facts of the case\n   - Relief sought\n\n3. **Mode of Submission**: File your complaint either in writing or electronically. Ensure that you are clear and concise.\n\n4. **Submit the Complaint**: File the complaint with the relevant Commission. You may need to submit a copy to the opposite party, which they will then have to respond to within 30 days (which can be extended by an additional 15 days).\n\n5. **Await Response**: If the opposite party denies the allegations or fails to respond, the Commission will proceed to settle the dispute based on the evidence provided by you.\n\n6. **Hearing**: Attend the hearing set by the Commission. If you don’t appear, the case may still be decided based on the merits.\n\n7. **Follow-up**: If required, you may be asked to submit evidence or documents to back your complaint during the process.\n\nBy adhering to these steps, you can effectively file a consumer complaint in India.",
+        "expected_answer": "",
         "expected_source": "CPA-2019",
         "domain": "consumer",
         "difficulty": "easy"
@@ -178,7 +178,7 @@
     {
         "id": "023",
         "query": "What are the penalties for misleading advertisements under the Consumer Protection Act?",
-        "expected_answer": "Under the Consumer Protection Act, the penalties for misleading advertisements are as follows:\n\n1. **For manufacturers or service providers**:\n   - First offence: Imprisonment of up to **two years** and a fine of up to **ten lakh rupees**.\n   - Subsequent offences: Imprisonment of up to **five years** and a fine of up to **fifty lakh rupees**.\n\n2. **For endorsers (those promoting the advertisement)**:\n   - A penalty may be imposed up to **ten lakh rupees** for misleading advertisements. \n   - For subsequent offences, the penalty may increase to **fifty lakh rupees**.\n   - Endorsers may also be prohibited from making endorsements for specified periods (up to **three years** for subsequent contraventions).\n\n3. **General non-compliance penalties**:\n   - Failure to comply with directives from the Central Authority can lead to imprisonment for up to **six months** and a fine of up to **twenty lakh rupees**. \n\nThese penalties emphasize the seriousness of misleading advertisements and aim to protect consumer interests.",
+        "expected_answer":  "Any manufacturer or service provider who causes a false or misleading\nadvertisement to be made which is prejudicial to the interest of consumers shall be punished\nwith imprisonment for a term which may extend to two years and with fine which may extend\nto ten lakh rupees; and for every subsequent offence, be punished with imprisonment for a\nterm which may extend to five years and with fine which may extend to fifty lakh rupees.\n90.",
         "expected_source": "CPA-2019",
         "domain": "consumer",
         "difficulty": "easy"
@@ -186,7 +186,7 @@
     {
         "id": "024",
         "query": "What is the time limit to file a consumer complaint?",
-        "expected_answer": "The time limit to file a consumer complaint is not explicitly stated in the provided context. However, once a complaint is received by the District Commission, the opposite party is directed to respond within a period of thirty days, which can be extended up to an additional fifteen days. \n\nIt’s important to check with the appropriate consumer forum or legal resources for specific time limits related to filing a complaint, as these may vary based on the nature of the complaint and local regulations.",
+        "expected_answer": "The context does not specify a time limit for filing a consumer complaint. The retrieved context covers the procedure after a complaint is admitted by the District Commission, including that the opposite party must respond within thirty days, extendable by fifteen days, but does not state the filing time limit for consumers.",
         "expected_source": "CPA-2019",
         "domain": "consumer",
         "difficulty": "medium"
@@ -194,7 +194,7 @@
     {
         "id": "025",
         "query": "What is the pecuniary jurisdiction of the District Consumer Commission?",
-        "expected_answer": "The pecuniary jurisdiction of the District Consumer Commission is not explicitly stated in the provided context. However, typically, the District Commission handles consumer disputes involving claims up to a certain monetary limit, which may be defined by state regulations or government notifications. To find the exact limit, you may need to refer to the specific rules or notifications issued by the State Government under the Consumer Protection Act in your state.",
+        "expected_answer": "The pecuniary jurisdiction of the District Consumer Commission is not explicitly stated in the retrieved context.",
         "expected_source": "CPA-2019",
         "domain": "consumer",
         "difficulty": "medium"
@@ -242,7 +242,7 @@
     {
         "id":"031",
         "query":"What does Section 78 of the IT Act say about power to investigate offences?",
-        "expected_answer":"78. Power to investigate offences .–Notwithstanding anything contained in the Code of Criminal \nProcedure, 1973 (2 of 1974), a police officer not below the rank of 1[Inspector] shall investigate any \noffence under this Act. \n2[CHAPTER XII \nINTERMEDIARIES NOT TO BE LIABLE IN CERTAIN CASES \n79. Exemption from liability of intermediary in certain cases .–(1) Notwithstanding anything \ncontained in any law for the time being in force but subject to the provisions of sub -sections (2) and (3), \nan intermediary shall not be liable for any third party information, data, or communication link made \navailable or hosted by him. \n(2) The provisions of sub-section",
+        "expected_answer":"Under Section 78 of the IT Act, notwithstanding anything contained in the Code of Criminal Procedure 1973, a police officer not below the rank of Inspector shall investigate any offence under this Act.",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"easy"
@@ -251,7 +251,7 @@
     {
         "id":"032",
         "query":"What are the penalties for sending offensive messages through a communication service under the IT Act?",
-        "expected_answer":"Whoever intentionally insults in any manner, and thereby gives provocation to\nany person, intending or knowing it to be likely that such provocation will cause him to break\nthe public peace, or to commit any other offence, shall be punished with imprisonment of\neither description for a term which may extend to two years, or with fine, or with both",
+        "expected_answer":"",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"easy"
@@ -269,7 +269,7 @@
     {
         "id":"034",
         "query":"What is the punishment for publishing material containing sexually explicit acts in electronic form under the IT Act?",
-        "expected_answer":"electronic form any material which contains sexually explicit act or conduct shall be punished on first \nconviction with imprisonment of either description for a term which may extend to five years",
+        "expected_answer":"Under Section 67A of the IT Act, whoever publishes or transmits or causes to be published or transmitted in electronic form any material containing a sexually explicit act or conduct shall be punished on first conviction with imprisonment for a term which may extend to five years and with fine which may extend to ten lakh rupees, and on second or subsequent conviction with imprisonment for a term which may extend to seven years and with fine which may extend to ten lakh rupees.",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"medium"
@@ -278,7 +278,7 @@
     {
         "id":"035",
         "query":"What does Section 84B say about punishment for abetment of offences under the IT Act?",
-        "expected_answer":"committed in consequence of the abetment, shall be punished with punishment provided for that offence. \nExplanation.— An act or offence is said to be committed in consequence of abetment, when it is \ncommitted in consequence of  the instigation, or in pursuance of the conspiracy or with the aid, which \nconstitutes the abetment. \n18. Punishment for  attempt to commit an offence. —Whoever attempts to commit any offence \npunishable under this Act or to  cause such an offence to be committed, and in such attempt, does any act \ntowards the commission of the offence, shall be  punished with imprisonment of any description provided \nfor the offence, for a term which may extend to one half of the  imprisonment for life or, as the case may \nbe, one-half of the longest term of imprisonment provided for that offence or with fineor with both.",
+        "expected_answer":"",
         "expected_source":"it_act_2000_updated",
         "domain":"cyber",
         "difficulty":"medium"
